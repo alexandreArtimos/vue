@@ -18,8 +18,8 @@ import 'jquery/dist/jquery'
 import 'bootstrap/dist/js/bootstrap.js';
 
 Vue.use(VueResource);
-Vue.http.options.root = process.env.API_URL ? process.env.API_URL : 'http://localhost:3000';
-
+//Vue.http.options.root = process.env.API_URL ? process.env.API_URL : 'http://localhost:3000';
+Vue.http.options.root = process.env.API_URL ? 'http://localhost:3000' : 'http://localhost:3000';
 Vue.http.interceptors.push((req, next) => {
 
   // é possível colocar informações no header antes do envio da requisição
